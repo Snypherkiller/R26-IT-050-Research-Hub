@@ -42,4 +42,4 @@ Accepted categories: `Proposal`, `Progress`, `Research Paper`, `Other`. Types: `
 
 ## Contents
 
-Eleven unique files, including the proposal reports and presentation, TAF, IME business plan, Progress Presentation 2, panel comments, and templates. Empty placeholder folders and duplicate documents are not listed.
+Nine unique files, including the proposal reports and presentation, TAF, IME business plan, Progress Presentation 2, and IEEE research paper template. Empty placeholder folders and duplicate documents are not listed.

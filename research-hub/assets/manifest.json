@@ -1,14 +1,5 @@
 [
   {
-    "id": "file-01",
-    "name": "Panel Comments for the Students.xlsm",
-    "category": "Other",
-    "type": "Spreadsheet",
-    "format": "XLSM",
-    "size": 29347,
-    "path": "assets/files/file-01.xlsm"
-  },
-  {
     "id": "file-02",
     "name": "AI Driven Tour Package Generator - Research Proposal.pdf",
     "category": "Proposal",
@@ -52,15 +43,6 @@
     "format": "PPTX",
     "size": 5690598,
     "path": "assets/files/file-06.pptx"
-  },
-  {
-    "id": "file-07",
-    "name": "Proposal Presentation Template.potm",
-    "category": "Proposal",
-    "type": "Presentation",
-    "format": "POTM",
-    "size": 472252,
-    "path": "assets/files/file-07.potm"
   },
   {
     "id": "file-08",
