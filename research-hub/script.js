@@ -101,7 +101,7 @@ function createFileCard(file) {
 
   const viewButton = document.createElement("button");
   viewButton.className = "view-btn";
-  viewButton.textContent = "View Details ↗";
+  viewButton.textContent = "View Details  ";
   viewButton.addEventListener("click", () => previewFile(file));
 
   const downloadButton = document.createElement("a");
