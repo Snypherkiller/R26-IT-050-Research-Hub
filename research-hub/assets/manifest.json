@@ -71,5 +71,14 @@
     "format": "DOCX",
     "size": 39566,
     "path": "assets/files/file-08.docx"
+  },
+  {
+    "id": "file-09",
+    "name": "Research Proposal Report - IT22895196.pdf",
+    "category": "Proposal",
+    "type": "Document",
+    "format": "PDF",
+    "size": 742288,
+    "path": "assets/files/file-09.pdf"
   }
 ]
