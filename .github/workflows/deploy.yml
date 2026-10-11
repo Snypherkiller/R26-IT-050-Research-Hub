@@ -31,10 +31,15 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload website files
+      - name: Verify website files
+        run: |
+          ls -la research-hub/
+          test -f research-hub/index.html
+
+      - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: ./research-hub
 
       - name: Deploy website
         id: deployment
