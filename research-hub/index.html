@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080c17" />
+  <title>Research Hub | R26-IT-050</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <a href="#home" class="brand">
+        <span class="brand-icon">✦</span>
+        <span>RESEARCH<span class="accent">HUB</span></span>
+      </a>
+
+      <div class="workspace">
+        <div class="workspace-icon">R</div>
+        <div>
+          <strong>R26-IT-050</strong>
+          <small>Research Workspace</small>
+        </div>
+      </div>
+
+      <p class="nav-title">WORKSPACE</p>
+
+      <nav>
+        <button class="nav-link active" data-category="all">
+          <span>◫</span> All Files
+        </button>
+        <button class="nav-link" data-category="Document">
+          <span>▤</span> Documents
+        </button>
+        <button class="nav-link" data-category="Presentation">
+          <span>▣</span> Presentations
+        </button>
+        <button class="nav-link" data-category="Template">
+          <span>◇</span> Templates
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="info-card">
+          <h4>✧ Team Workspace</h4>
+          <p>All your research documents and presentations, organized in one place.</p>
+        </div>
+        <p>© 2026 Research Hub</p>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="breadcrumb">
+          Workspace <span>/</span> <strong>Overview</strong>
+        </div>
+        <div class="team-badge">
+          <span class="online-dot"></span>
+          Research Team
+        </div>
+      </header>
+
+      <main id="home">
+        <section class="welcome">
+          <div>
+            <p class="eyebrow">YOUR DIGITAL WORKSPACE</p>
+            <h1>Research, organized<span class="accent">.</span></h1>
+            <p>All your research files, reports and presentations in one beautiful workspace.</p>
+          </div>
+          <a href="#library" class="primary-btn">Explore Files ↗</a>
+        </section>
+
+        <section class="hero">
+          <div class="hero-content">
+            <span class="hero-label">✦ PROJECT RESOURCE CENTER</span>
+            <h2>Everything you need.<br /><span>All in one place.</span></h2>
+            <p>Browse, preview and download your project files with ease.</p>
+            <a href="#library" class="hero-btn">Browse Downloads ↗</a>
+          </div>
+          <div class="hero-visual">
+            <div class="visual-circle"></div>
+            <div class="floating-doc">▤</div>
+            <div class="floating-slide">▣</div>
+          </div>
+        </section>
+
+        <section class="stats">
+          <div class="stat-card">
+            <div class="stat-icon blue">▤</div>
+            <div>
+              <small>TOTAL FILES</small>
+              <h3 id="totalCount">0</h3>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon purple">▧</div>
+            <div>
+              <small>DOCUMENTS</small>
+              <h3 id="documentCount">0</h3>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon orange">▣</div>
+            <div>
+              <small>PRESENTATIONS</small>
+              <h3 id="presentationCount">0</h3>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green">◇</div>
+            <div>
+              <small>TEMPLATES</small>
+              <h3 id="templateCount">0</h3>
+            </div>
+          </div>
+        </section>
+
+        <section class="library" id="library">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">YOUR LIBRARY</p>
+              <h2>Project Files <span id="fileCount" class="count-badge">0</span></h2>
+              <p>Access and download all your research resources.</p>
+            </div>
+            <span id="resultCount" class="result-count"></span>
+          </div>
+
+          <div class="toolbar">
+            <div class="search-box">
+              <span>⌕</span>
+              <input
+                type="search"
+                id="searchInput"
+                placeholder="Search documents, presentations..."
+              />
+            </div>
+            <div class="filters">
+              <button class="filter-btn active" data-filter="all">All Files</button>
+              <button class="filter-btn" data-filter="Document">Documents</button>
+              <button class="filter-btn" data-filter="Presentation">Presentations</button>
+              <button class="filter-btn" data-filter="Template">Templates</button>
+            </div>
+          </div>
+
+          <div id="fileGrid" class="file-grid"></div>
+
+          <div id="emptyState" class="empty-state" hidden>
+            <h3>No files found</h3>
+            <p>Try searching with another keyword or category.</p>
+          </div>
+        </section>
+
+        <footer>
+          <p>© 2026 R26-IT-050 Research Hub</p>
+          <p>Made for research collaboration ✦</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <dialog id="previewModal" class="preview-modal">
+    <div class="modal-header">
+      <div>
+        <p class="eyebrow">FILE DETAILS</p>
+        <h3 id="previewTitle">File Preview</h3>
+      </div>
+      <button id="closePreview" class="close-btn">✕</button>
+    </div>
+    <p id="previewInfo" class="preview-info"></p>
+    <div id="previewContent"></div>
+    <div class="modal-actions">
+      <a id="previewDownload" class="primary-btn" download>↓ Download File</a>
+      <button id="cancelPreview" class="secondary-btn">Close</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

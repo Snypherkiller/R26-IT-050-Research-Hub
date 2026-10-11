@@ -1,0 +1,75 @@
+
+[
+  {
+    "id": "file-01",
+    "name": "Panel Comments for the Students.xlsm",
+    "category": "Other",
+    "type": "Spreadsheet",
+    "format": "XLSM",
+    "size": 29347,
+    "path": "assets/files/file-01.xlsm"
+  },
+  {
+    "id": "file-02",
+    "name": "AI Driven Tour Package Generator - Research Proposal.pdf",
+    "category": "Proposal",
+    "type": "Document",
+    "format": "PDF",
+    "size": 742288,
+    "path": "assets/files/file-02.pdf"
+  },
+  {
+    "id": "file-03",
+    "name": "Project Proposal - IT22214720.pdf",
+    "category": "Proposal",
+    "type": "Document",
+    "format": "PDF",
+    "size": 940583,
+    "path": "assets/files/file-03.pdf"
+  },
+  {
+    "id": "file-04",
+    "name": "Intelligent Mobility and Vehicle Selection Engine.pdf",
+    "category": "Proposal",
+    "type": "Document",
+    "format": "PDF",
+    "size": 10027616,
+    "path": "assets/files/file-04.pdf"
+  },
+  {
+    "id": "file-05",
+    "name": "Project Proposal - IT22224866.pdf",
+    "category": "Proposal",
+    "type": "Document",
+    "format": "PDF",
+    "size": 4644968,
+    "path": "assets/files/file-05.pdf"
+  },
+  {
+    "id": "file-06",
+    "name": "Project Proposal Presentation R26-IT-050.pptx",
+    "category": "Proposal",
+    "type": "Presentation",
+    "format": "PPTX",
+    "size": 5690598,
+    "path": "assets/files/file-06.pptx"
+  },
+  {
+    "id": "file-07",
+    "name": "Proposal Presentation Template.potm",
+    "category": "Proposal",
+    "type": "Presentation",
+    "format": "POTM",
+    "size": 472252,
+    "path": "assets/files/file-07.potm"
+  },
+  {
+    "id": "file-08",
+    "name": "IEEE Research Paper Template.docx",
+    "category": "Research Paper",
+    "type": "Document",
+    "format": "DOCX",
+    "size": 39566,
+    "path": "assets/files/file-08.docx"
+  }
+]
