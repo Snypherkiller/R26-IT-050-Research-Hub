@@ -1,4 +1,3 @@
-
 [
   {
     "id": "file-01",
@@ -73,12 +72,30 @@
     "path": "assets/files/file-08.docx"
   },
   {
-    "id": "file-09",
-    "name": "Research Proposal Report - IT22895196.pdf",
-    "category": "Proposal",
+    "id": "taf-r26-it-050",
+    "name": "TAF - R26-IT-050.pdf",
+    "category": "Other",
     "type": "Document",
     "format": "PDF",
-    "size": 742288,
-    "path": "assets/files/file-09.pdf"
+    "size": 5205151,
+    "path": "assets/files/taf-r26-it-050.pdf"
+  },
+  {
+    "id": "ime-it4050-business-plan",
+    "name": "CeylonGo Business Plan - IME IT4050.docx",
+    "category": "Other",
+    "type": "Document",
+    "format": "DOCX",
+    "size": 94155,
+    "path": "assets/files/ime-it4050-business-plan.docx"
+  },
+  {
+    "id": "progress-presentation-2",
+    "name": "Progress Presentation 2 - R26-IT-050.pptx",
+    "category": "Progress",
+    "type": "Presentation",
+    "format": "PPTX",
+    "size": 780204,
+    "path": "assets/files/progress-presentation-2.pptx"
   }
 ]

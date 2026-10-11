@@ -42,4 +42,4 @@ Accepted categories: `Proposal`, `Progress`, `Research Paper`, `Other`. Types: `
 
 ## Contents
 
-Eight real files from the provided ZIP. Empty placeholder README folders are not represented as downloadable files.
+Eleven unique files, including the proposal reports and presentation, TAF, IME business plan, Progress Presentation 2, panel comments, and templates. Empty placeholder folders and duplicate documents are not listed.
