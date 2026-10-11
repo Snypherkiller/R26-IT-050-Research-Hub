@@ -37,8 +37,8 @@
   },
   {
     "id": "file-06",
-    "name": "Project Proposal Presentation R26-IT-050.pptx",
-    "category": "Proposal",
+    "name": "Progress Presentation 1 - R26-IT-050 (originally Proposal Presentation).pptx",
+    "category": "Progress",
     "type": "Presentation",
     "format": "PPTX",
     "size": 5690598,
@@ -79,5 +79,23 @@
     "format": "PPTX",
     "size": 780204,
     "path": "assets/files/progress-presentation-2.pptx"
+  },
+  {
+    "id": "ceylongo-readme",
+    "name": "CeylonGo Project README.md",
+    "category": "Other",
+    "type": "Document",
+    "format": "MD",
+    "size": 40897,
+    "path": "assets/files/ceylongo-readme.md"
+  },
+  {
+    "id": "ceylongo-unified-platform-report",
+    "name": "AI-Powered Unified Sri Lankan Tourism Platform Using GraphRAG and LLM Orchestration.pdf",
+    "category": "Other",
+    "type": "Document",
+    "format": "PDF",
+    "size": 447470,
+    "path": "assets/files/ceylongo-unified-platform-report.pdf"
   }
 ]

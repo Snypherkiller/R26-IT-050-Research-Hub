@@ -1,6 +1,6 @@
 # R26-IT-050 Research Hub
 
-Dark-themed static research file website inspired by the structure of the EcoGarden downloads page, with an original layout.
+Static academic research website for CeylonGo, with research domain, methodology, results, milestones, team contacts, and a searchable document library.
 
 ## Run locally
 
@@ -42,4 +42,8 @@ Accepted categories: `Proposal`, `Progress`, `Research Paper`, `Other`. Types: `
 
 ## Contents
 
-Nine unique files, including the proposal reports and presentation, TAF, IME business plan, Progress Presentation 2, and IEEE research paper template. Empty placeholder folders and duplicate documents are not listed.
+Eleven unique files, including the proposal reports, the team-identified PP1 deck (original filename: Proposal Presentation), TAF, IME business plan, Progress Presentation 2, IEEE research paper template, CeylonGo project README, and unified tourism platform report. Empty placeholder folders and duplicate documents are not listed.
+
+## Academic content
+
+Content is based on the team-supplied project review and presentation. Recorded component metrics are qualified by their evaluation scope. Assessment dates and marks remain unconfirmed. Final reports, checklists, a completed paper, and final slides are pending. Team emails use the student-ID pattern supplied by the team. The document bundle remains approximately 29.7 MB; confirm the course upload limit before submission.

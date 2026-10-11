@@ -164,7 +164,7 @@ function previewFile(file) {
     const message = document.createElement("div");
     message.className = "preview-message";
     message.textContent =
-      "This file is available for download. Open it using PowerPoint, Word, Excel or another compatible application.";
+      "This file is available for download. Open it using a compatible document viewer or text editor.";
     area.appendChild(message);
   }
 
@@ -187,7 +187,8 @@ $("searchInput").addEventListener("input", (event) => {
 });
 
 $("menuBtn").addEventListener("click", () => {
-  $("sidebar").classList.toggle("open");
+  const open = $("sidebar").classList.toggle("open");
+  $("menuBtn").setAttribute("aria-expanded", String(open));
 });
 
 $("closePreview").addEventListener("click", () => {
@@ -220,3 +221,10 @@ async function loadFiles() {
 }
 
 loadFiles();
+
+document.querySelectorAll('.section-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    $('sidebar').classList.remove('open');
+    $('menuBtn').setAttribute('aria-expanded', 'false');
+  });
+});
