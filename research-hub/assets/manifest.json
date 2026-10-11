@@ -1,3 +1,4 @@
+
 [
   {
     "id": "file-02",
@@ -97,5 +98,14 @@
     "format": "PDF",
     "size": 447470,
     "path": "assets/files/ceylongo-unified-platform-report.pdf"
+  },
+  {
+    "id": "file-09",
+    "name": "Research Proposal Report - IT22895196.pdf",
+    "category": "Proposal",
+    "type": "Document",
+    "format": "PDF",
+    "size": 0,
+    "path": "assets/files/file-09.pdf"
   }
 ]
