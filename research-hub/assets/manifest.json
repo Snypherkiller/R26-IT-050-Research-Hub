@@ -133,5 +133,50 @@
     "format": "XLSX",
     "size": 19297,
     "path": "assets/files/Checklist 2.xlsx"
+  },
+  {
+    "id": "thesis-it22214720",
+    "name": "Thesis - IT22214720 (Draft).pdf",
+    "category": "Other",
+    "type": "Document",
+    "format": "PDF",
+    "size": 515941,
+    "path": "assets/files/Thesis - IT22214720 (Draft).pdf"
+  },
+  {
+    "id": "thesis-it22224866",
+    "name": "Thesis - IT22224866 (Draft).pdf",
+    "category": "Other",
+    "type": "Document",
+    "format": "PDF",
+    "size": 808894,
+    "path": "assets/files/Thesis - IT22224866 (Draft).pdf"
+  },
+  {
+    "id": "thesis-it22555458",
+    "name": "Thesis - IT22555458 (Draft).pdf",
+    "category": "Other",
+    "type": "Document",
+    "format": "PDF",
+    "size": 7310085,
+    "path": "assets/files/Thesis - IT22555458 (Draft).pdf"
+  },
+  {
+    "id": "thesis-it22895196",
+    "name": "Thesis - IT22895196 (Draft).pdf",
+    "category": "Other",
+    "type": "Document",
+    "format": "PDF",
+    "size": 326227,
+    "path": "assets/files/Thesis - IT22895196 (Draft).pdf"
+  },
+  {
+    "id": "group-thesis-r26-it-050",
+    "name": "Group Thesis - R26-IT-050 (Draft).pdf",
+    "category": "Other",
+    "type": "Document",
+    "format": "PDF",
+    "size": 744290,
+    "path": "assets/files/Group Thesis - R26-IT-050 (Draft).pdf"
   }
 ]
