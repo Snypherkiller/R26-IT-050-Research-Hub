@@ -859,3 +859,5 @@ th { background:#e3f0ff; }
 .contact-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 @media(max-width:900px){.contact-layout{grid-template-columns:1fr}}
 @media(max-width:600px){.contact-fields{grid-template-columns:1fr}.contact-form-card,.contact-intro{padding:20px}}
+
+.contact-back{display:inline-block;color:#1266c6;font-size:13px;font-weight:700;margin-bottom:20px}.contact-section{margin-top:18px}
