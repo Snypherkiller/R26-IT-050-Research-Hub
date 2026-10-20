@@ -1,0 +1,6 @@
+const menu=document.getElementById("menuBtn");const sidebar=document.getElementById("sidebar");menu.addEventListener("click",()=>{const open=sidebar.classList.toggle("open");menu.setAttribute("aria-expanded",String(open));});
+const form=document.getElementById("contactForm"),button=document.getElementById("contactSubmit"),status=document.getElementById("contactStatus");
+form.addEventListener("submit",async event=>{event.preventDefault();if(!form.reportValidity())return;button.disabled=true;button.textContent="Sending…";status.textContent="Submitting your enquiry…";status.removeAttribute("data-state");
+try{const response=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});const data=await response.json();if(!response.ok||data.success===false||data.success==="false")throw new Error("Not accepted");status.dataset.state="success";status.textContent="Your message was submitted. Thank you! (Email delivery requires recipient activation.)";form.reset();}
+catch(error){console.error("Contact form error:",error);status.dataset.state="error";status.textContent="Message couldn't be sent. Please email dnimtharu@gmail.com directly.";}
+finally{button.disabled=false;button.textContent="Send message →";}});
