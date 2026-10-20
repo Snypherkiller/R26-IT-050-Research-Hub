@@ -93,6 +93,13 @@
     content="https://snyperkiller.github.io/R26-IT-050-Research-Hub/images/preview.png"
   />
 
+  <script>
+    try {
+      const savedTheme = localStorage.getItem("research-hub-theme");
+      document.documentElement.dataset.theme = savedTheme === "dark" || savedTheme === "light"
+        ? savedTheme : (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    } catch { document.documentElement.dataset.theme = "light"; }
+  </script>
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -121,7 +128,7 @@
       </div>
 
       <nav class="section-nav" aria-label="Research sections">
-<a href="#home">Home</a><a href="#domain">Research domain</a><a href="#methodology">Methodology</a><a href="#results">Results</a><a href="#milestones">Milestones</a><a href="#library">Documents &amp; slides</a><a href="#team">About us</a><a href="#contact">Contact us</a></nav><p class="nav-title">FILE LIBRARY</p>
+<a href="#home">Home</a><a href="#domain">Research domain</a><a href="#methodology">Methodology</a><a href="#results">Results</a><a href="#milestones">Milestones</a><a href="#library">Documents &amp; slides</a><a href="#team">About us</a><a href="#reviews">Reviews</a><a href="#contact">Contact us</a></nav><p class="nav-title">FILE LIBRARY</p>
 
       <nav aria-label="File categories">
 
@@ -203,9 +210,7 @@
           <strong>Overview</strong>
         </div>
 
-        <div class="team-badge">
-          Research Team
-        </div>
+        <button type="button" id="themeToggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
 
       </header>
 
@@ -469,6 +474,38 @@
         <!-- =========================
              FOOTER
         ========================== -->
+
+        <section id="reviews" class="research-section">
+          <p class="eyebrow">YOUR PERSPECTIVE</p>
+          <h2>Research website reviews</h2>
+          <p>Share feedback on the clarity, usefulness and usability of this research website.</p>
+          <p id="reviewPrivacy">Reviews are saved only in this browser. They are not sent to the team or published for other visitors.</p>
+          <div class="research-grid review-layout">
+            <form id="reviewForm" class="research-card review-form" aria-describedby="reviewPrivacy">
+              <h3>Write a review</h3>
+              <label for="reviewName">Your name</label>
+              <input id="reviewName" name="name" autocomplete="name" required maxlength="80">
+              <fieldset class="rating-picker">
+                <legend>Your rating</legend>
+                <div class="rating-options">
+                  <label><input type="radio" name="rating" value="1" required><span>1 ★</span></label>
+                  <label><input type="radio" name="rating" value="2"><span>2 ★</span></label>
+                  <label><input type="radio" name="rating" value="3"><span>3 ★</span></label>
+                  <label><input type="radio" name="rating" value="4"><span>4 ★</span></label>
+                  <label><input type="radio" name="rating" value="5"><span>5 ★</span></label>
+                </div>
+              </fieldset>
+              <label for="reviewComment">Your review</label>
+              <textarea id="reviewComment" name="comment" required minlength="10" maxlength="1000" rows="5" placeholder="What worked well? What could be clearer?"></textarea>
+              <button type="submit" class="primary-btn">Save review on this device</button>
+              <p id="reviewStatus" role="status" aria-live="polite"></p>
+            </form>
+            <div>
+              <h3 id="reviewSummary">Reviews on this device</h3>
+              <div id="reviewList" class="review-list"></div>
+            </div>
+          </div>
+        </section>
 
         <footer>
 

@@ -859,3 +859,42 @@ th { background:#e3f0ff; }
 .contact-honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 @media(max-width:900px){.contact-layout{grid-template-columns:1fr}}
 @media(max-width:600px){.contact-fields{grid-template-columns:1fr}.contact-form-card,.contact-intro{padding:20px}}
+
+/* Theme switch and local website reviews */
+:root { color-scheme: light; }
+.theme-toggle { border:1px solid var(--border); border-radius:999px; padding:10px 16px; background:var(--panel); color:var(--text); font-size:13px; font-weight:600; white-space:nowrap; }
+.review-form { display:flex; flex-direction:column; gap:12px; margin:0; }
+.review-form label,.rating-picker legend { font-size:13px; font-weight:600; }
+.review-form input:not([type=radio]),.review-form textarea { width:100%; padding:12px; border:1px solid var(--border); border-radius:9px; font:inherit; color:var(--text); background:var(--bg); }
+.review-form textarea { resize:vertical; }
+.rating-picker { border:0; padding:0; margin:4px 0; min-width:0; }
+.rating-options { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+.rating-options label { position:relative; }
+.rating-options input { position:absolute; opacity:0; width:100%; height:100%; margin:0; cursor:pointer; }
+.rating-options span { display:block; padding:10px; border:1px solid var(--border); border-radius:8px; color:var(--text); }
+.rating-options input:checked + span { background:#1479ef; color:white; border-color:#1479ef; }
+.rating-options input:focus-visible + span { outline:3px solid var(--accent); outline-offset:3px; }
+.review-layout { align-items:start; }
+.review-list { display:grid; gap:14px; }
+.review-card h4 { margin:0; overflow-wrap:anywhere; }
+.review-comment { white-space:pre-wrap; overflow-wrap:anywhere; }
+.review-rating { color:#936200!important; letter-spacing:3px; }
+#reviewStatus { margin:0; min-height:1.8em; }
+
+:root[data-theme=dark] { color-scheme:dark; --bg:#101b2b; --sidebar:#172438; --panel:#172438; --panel-light:#20344d; --border:#354b66; --text:#e6eefb; --muted:#b3c3d9; --accent:#86bcff; }
+[data-theme=dark] :is(.sidebar,.topbar,.file-card,.stat-card,.research-card,details,table,.preview-modal,.search-box,.filter-btn) { background:var(--panel); border-color:var(--border); color:var(--text); }
+[data-theme=dark] :is(h1,h2,h3,h4,.welcome h1,.hero h2,.section-header h2,.file-card h3,.stat-card h3,.modal-header h3,.workspace strong,.breadcrumb strong,.brand,.menu-btn,.contact-form-card label) { color:var(--text); }
+[data-theme=dark] :is(.research-section p,.research-section li,.welcome p:not(.eyebrow),.section-header p:not(.eyebrow),.hero p,.file-meta,.preview-info,.preview-message,.result-count,.breadcrumb,.nav-link,.workspace small,.stat-card small,.nav-title,footer,.sidebar-bottom>p,.info-card p) { color:var(--muted); }
+[data-theme=dark] :is(.workspace,.info-card,.tech-list span,th,.file-format,.count-badge,.view-btn,.close-btn,.secondary-btn,.contact-symbol) { background:var(--panel-light); border-color:var(--border); color:#c5dfff; }
+[data-theme=dark] :is(.hero,.contact-intro) { background:linear-gradient(125deg,#1c334f,#223f62); border-color:var(--border); }
+[data-theme=dark] :is(.section-nav a,.research-section a:not(.primary-btn),.eyebrow,.hero-label,.accent) { color:var(--accent); }
+[data-theme=dark] .member-id { color:var(--accent)!important; }
+[data-theme=dark] :is(.nav-link.active,.nav-link:hover,.filter-btn.active,.filter-btn:hover,.section-nav a:hover,.section-nav a:focus-visible) { background:#294769; color:#e6eefb; border-color:var(--border); }
+[data-theme=dark] :is(.search-box input,.contact-form-card input,.contact-form-card select,.contact-form-card textarea) { background:var(--bg); color:var(--text); border-color:var(--border); }
+[data-theme=dark] input::placeholder,[data-theme=dark] textarea::placeholder { color:#a7bad2; }
+[data-theme=dark] :is(.file-actions,.topbar,footer,th,td) { border-color:var(--border); }
+[data-theme=dark] .contact-privacy { color:var(--muted)!important; }
+[data-theme=dark] #contactStatus[data-state=success] { color:#8ce3bc; }
+[data-theme=dark] #contactStatus[data-state=error] { color:#ffacba; }
+[data-theme=dark] .review-rating { color:#ffd179!important; }
+@media(max-width:480px) { .breadcrumb { display:none; } .theme-toggle { padding:10px 12px; } }

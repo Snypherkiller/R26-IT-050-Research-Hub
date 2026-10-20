@@ -265,3 +265,96 @@ if (contactForm) {
     }
   });
 }
+
+// Theme preference is independent of locally saved reviews.
+const themeToggle = $("themeToggle");
+function updateThemeControl() {
+  const dark = document.documentElement.dataset.theme === "dark";
+  themeToggle.textContent = dark ? "☀ Light mode" : "☾ Dark mode";
+  themeToggle.setAttribute("aria-pressed", String(dark));
+  themeToggle.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+  document.querySelector('meta[name="theme-color"]').content = dark ? "#101b2b" : "#bfd9f9";
+}
+themeToggle.addEventListener("click", () => {
+  const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = theme;
+  try { localStorage.setItem("research-hub-theme", theme); } catch { /* Theme still works for this visit. */ }
+  updateThemeControl();
+});
+updateThemeControl();
+
+const reviewStorageKey = "research-hub-reviews-v1";
+let reviews = [];
+try {
+  const saved = JSON.parse(localStorage.getItem(reviewStorageKey) || "[]");
+  if (Array.isArray(saved)) reviews = saved.filter(review =>
+    review && typeof review.id === "string" && typeof review.name === "string" &&
+    typeof review.comment === "string" && Number.isInteger(review.rating) &&
+    review.rating >= 1 && review.rating <= 5
+  ).slice(0, 50);
+} catch { /* Start with an empty list if storage is unavailable or invalid. */ }
+
+function renderReviews() {
+  const list = $("reviewList");
+  list.replaceChildren();
+  $("reviewSummary").textContent = reviews.length
+    ? `${(reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length).toFixed(1)} / 5 · ${reviews.length} local review${reviews.length === 1 ? "" : "s"}`
+    : "Reviews on this device";
+  if (!reviews.length) {
+    const empty = document.createElement("p");
+    empty.className = "research-card";
+    empty.textContent = "No reviews saved yet. Add your first review using the form.";
+    list.append(empty);
+  }
+  reviews.forEach(review => {
+    const card = document.createElement("article");
+    card.className = "research-card review-card";
+    const name = document.createElement("h4");
+    name.textContent = review.name;
+    const rating = document.createElement("p");
+    rating.className = "review-rating";
+    rating.textContent = "★".repeat(review.rating) + "☆".repeat(5 - review.rating);
+    rating.setAttribute("aria-label", `${review.rating} out of 5 stars`);
+    const comment = document.createElement("p");
+    comment.className = "review-comment";
+    comment.textContent = review.comment;
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.className = "secondary-btn";
+    remove.textContent = "Delete local review";
+    remove.setAttribute("aria-label", `Delete local review by ${review.name}`);
+    remove.addEventListener("click", () => {
+      const next = reviews.filter(item => item.id !== review.id);
+      try { localStorage.setItem(reviewStorageKey, JSON.stringify(next)); }
+      catch { $("reviewStatus").textContent = "Unable to delete from browser storage. Please try again."; return; }
+      reviews = next;
+      renderReviews();
+      $("reviewStatus").textContent = "Review deleted from this browser.";
+      $("reviewName").focus();
+    });
+    card.append(name, rating, comment, remove);
+    list.append(card);
+  });
+}
+$("reviewForm").addEventListener("submit", event => {
+  event.preventDefault();
+  const name = $("reviewName").value.trim();
+  const comment = $("reviewComment").value.trim();
+  const rating = Number(new FormData(event.currentTarget).get("rating"));
+  if (!name || comment.length < 10 || !Number.isInteger(rating) || rating < 1 || rating > 5) {
+    $("reviewStatus").textContent = "Enter your name, select a rating and write at least 10 non-padding characters.";
+    return;
+  }
+  if (reviews.length >= 50) {
+    $("reviewStatus").textContent = "This browser has 50 reviews. Delete a local review before adding another.";
+    return;
+  }
+  const next = [{ id: crypto.randomUUID(), name, rating, comment }, ...reviews];
+  try { localStorage.setItem(reviewStorageKey, JSON.stringify(next)); }
+  catch { $("reviewStatus").textContent = "Your browser could not save this review. Check browser storage settings and try again."; return; }
+  reviews = next;
+  renderReviews();
+  event.currentTarget.reset();
+  $("reviewStatus").textContent = "Review saved in this browser only. Thank you for your feedback.";
+});
+renderReviews();
