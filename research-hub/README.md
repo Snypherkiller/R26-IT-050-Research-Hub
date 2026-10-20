@@ -47,3 +47,12 @@ Eleven unique files, including the proposal reports, the team-identified PP1 dec
 ## Academic content
 
 Content is based on the team-supplied project review and presentation. Recorded component metrics are qualified by their evaluation scope. Assessment dates and marks remain unconfirmed. Final reports, checklists, a completed paper, and final slides are pending. Team emails use the student-ID pattern supplied by the team. The document bundle remains approximately 29.7 MB; confirm the course upload limit before submission.
+
+## Contact Us form
+
+The Contact Us section contains a validated contact form that submits enquiries to **dnimtharu@gmail.com** using [FormSubmit](https://formsubmit.co/). The website is static, so no email password or SMTP credential is stored in source code.
+
+**One-time activation required:** After the first genuine form submission, check `dnimtharu@gmail.com` (including Spam) for the FormSubmit activation email, then approve the address. Until this is done, email delivery is **not verified or guaranteed**. After activation, send another test enquiry and verify it appears in the inbox. A success response means the form provider accepted the submission, not that the recipient read the message.
+
+Form fields: name, reply-to email, subject and message. The hidden honeypot reduces simple spam; FormSubmit may also use provider-side anti-spam verification. Do not remove these safeguards or publish private API keys. For a larger public site, consider a dedicated serverless endpoint with abuse protection and logs.
+
