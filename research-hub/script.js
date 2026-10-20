@@ -228,3 +228,40 @@ document.querySelectorAll('.section-nav a').forEach(link => {
     $('menuBtn').setAttribute('aria-expanded', 'false');
   });
 });
+
+
+// Contact form: GitHub Pages is static, so deliver messages through FormSubmit.
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!contactForm.reportValidity()) return;
+    const button = document.getElementById("contactSubmit");
+    const status = document.getElementById("contactStatus");
+    button.disabled = true;
+    button.textContent = "Sending…";
+    status.textContent = "Submitting your enquiry…";
+    status.removeAttribute("data-state");
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" }
+      });
+      const result = await response.json();
+      if (!response.ok || result.success === false || result.success === "false") {
+        throw new Error("Submission was not accepted");
+      }
+      status.textContent = "Your enquiry was submitted. Thank you for contacting us!";
+      status.dataset.state = "success";
+      contactForm.reset();
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+      status.textContent = "We couldn't submit your message. Please email dnimtharu@gmail.com directly."; 
+      status.dataset.state = "error";
+    } finally {
+      button.disabled = false;
+      button.textContent = "Send message →";
+    }
+  });
+}
