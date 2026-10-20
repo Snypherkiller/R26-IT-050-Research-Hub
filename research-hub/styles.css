@@ -902,3 +902,10 @@ th { background:#e3f0ff; }
 /* Portraits extracted from the supplied proposal deck; preserve the full image. */
 .member-photo { display:block; width:100%; max-width:180px; height:210px; object-fit:contain; object-position:center; border-radius:12px; background:var(--bg); margin-bottom:18px; }
 .taf-background h3 { font-size:16px; margin-bottom:8px; }
+
+/* Numbered academic references and readable DOI links. */
+.research-references { list-style:none; padding-left:0; }
+.research-references li { margin:14px 0; padding-left:2em; text-indent:-2em; overflow-wrap:anywhere; scroll-margin-top:24px; }
+.research-references li > span { font-weight:700; }
+.research-references a { text-decoration:underline; text-underline-offset:3px; }
+.research-references li:target { background:var(--panel-light); border-radius:6px; }
